@@ -17,9 +17,8 @@ console.log("Hello World");
 // });
 
 /** 3) Serve an HTML file */
-let indexPath = __dirname + "/views/index.html";
 app.get("/", (req, res) => {
-    res.sendFile(indexPath);
+    res.sendFile(__dirname + "/views/index.html");
 });
 
 /** 4) Serve static assets  */
