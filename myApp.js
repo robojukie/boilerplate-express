@@ -97,7 +97,9 @@ app.post("/name", (req, res) => res.json({"name": `${req.body.first} ${req.body.
 
 // This would be part of the basic setup of an Express app
 // but to allow FCC to run tests, the server is already active
-/** app.listen(process.env.PORT || 3000 ); */
+app.listen((process.env.PORT || 3000), ()=> {
+    console.log('Listening on port 3000');
+} );
 
 //---------- DO NOT EDIT BELOW THIS LINE --------------------
 
